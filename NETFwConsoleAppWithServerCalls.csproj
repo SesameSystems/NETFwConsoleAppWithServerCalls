@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24CBDDAA-1F23-4EE3-83EB-1A6A32940E7F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NETFwConsoleAppWithServerCalls</RootNamespace>
+    <AssemblyName>NETFwConsoleAppWithServerCalls</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Forge.Base, Version=1.0.8.0, Culture=neutral, PublicKeyToken=97960309cfe8d317, processorArchitecture=MSIL">
+      <HintPath>packages\Forge.Base.1.0.24\lib\net40\Forge.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Forge.Logging.Log4net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=97960309cfe8d317, processorArchitecture=MSIL">
+      <HintPath>packages\Forge.Logging.Log4Net.1.0.1\lib\net40\Forge.Logging.Log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Forge.Persistence, Version=1.0.0.8, Culture=neutral, PublicKeyToken=97960309cfe8d317, processorArchitecture=MSIL">
+      <HintPath>packages\Forge.Persistence.1.0.10\lib\net40\Forge.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Sesame.Communication.Data, Version=1.0.0.3, Culture=neutral, PublicKeyToken=84d730ab7945ba26, processorArchitecture=MSIL">
+      <HintPath>packages\Sesame.Communication.Data.1.0.0\lib\net40\Sesame.Communication.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Sesame.Communication.External.Client, Version=1.0.0.3, Culture=neutral, PublicKeyToken=84d730ab7945ba26, processorArchitecture=MSIL">
+      <HintPath>packages\Sesame.Communication.External.Client.1.0.0\lib\net40\Sesame.Communication.External.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sesame.Communication.External.Contracts, Version=1.0.0.3, Culture=neutral, PublicKeyToken=84d730ab7945ba26, processorArchitecture=MSIL">
+      <HintPath>packages\Sesame.Communication.External.Contracts.1.0.0\lib\net40\Sesame.Communication.External.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComProxy.cs" />
+    <Compile Include="DatabaseResponse.cs" />
+    <Compile Include="KeyAndValueItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPDatabaseDetailsRequest.cs" />
+    <Compile Include="SPDatabaseDetailsResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
