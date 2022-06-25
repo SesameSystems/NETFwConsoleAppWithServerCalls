@@ -1,4 +1,5 @@
 ﻿using Forge.Logging;
+using Forge.Logging.Utils;
 using Forge.Logging.Log4net;
 using Sesame.Communication.Data.Indentification;
 using Sesame.Communication.External.Client;
